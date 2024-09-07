@@ -28,17 +28,15 @@ The ANSI escape codes \x1b[1;35m and \x1b[0m are used to make the timestamp and 
 In your JavaScript files, you can now use the following methods:
 
 ```javascript
-console.sarcasm("This is a sarcastic message");
-console.warn("This is a warning");
-console.error("This is an error");
-console.debug("This is a debug message");
+ const message = argsToMessage(...args) + `\n\x1b[1m${sarcasticMessage}\x1b[0m`;
+ const logMessage = `\x1b[1;35m[${time}] [message]:\x1b[0m ${message}`;
 ```
 
 ## Customization
 
 - Modify the color scheme in `src/runtime.js`
 - Add more console methods with different formatting
-- Adjust the timestamp format to suit your needs
+- Adjust the timestamp format to suit our needs
 
 ## Running the Enhanced Runtime
 
@@ -49,8 +47,3 @@ cargo run
 
 The new logging features will be available in your JavaScript code.
 
-## Next Steps
-
-- Implement log levels (e.g., INFO, WARN, ERROR, DEBUG)
-- Add file logging capabilities
-- Create a configuration system for enabling/disabling different log types
