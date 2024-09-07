@@ -16,9 +16,12 @@ Update the `src/runtime.js` file with the following changes:
 2. Implement a timestamp function
 3. Create new console methods with color coding and timestamps
 
-'''
+
 The ANSI escape codes \x1b[1;35m and \x1b[0m are used to make the timestamp and label purple and bold.
-'''
+
+```markdown
+The ANSI escape codes \x1b[1;35m and \x1b[0m are used to make the timestamp and label purple and bold.
+```
 
 ## Usage
 
